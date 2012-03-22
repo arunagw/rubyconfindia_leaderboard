@@ -1,0 +1,74 @@
+/*
+*= require_tree .
+*/
+
+body{
+  background:#a00 url("/assets/bg_waves.png") repeat fixed center center;
+  color:#fff;
+  font-size:16px;
+  line-height:19px
+}
+.tweet {
+  /*height: 370px;*/
+}
+
+.thumbnails > li {
+  margin-left: 20px;
+}
+
+.span9 > .thumbnails > li {
+  margin-left: 20px;
+}
+
+.thumbnails img{
+  padding: 10px;
+}
+
+.user_detail {
+  height: 120px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.my-thumb {
+  background-color: white;
+  /*font-size: 2.5em;*/
+  height: 300px;
+  text-align: center;
+}
+
+.card {
+  padding-top: 10px;
+}
+
+.embedly_twitter {
+  background: none !important;
+}
+
+.side-unit h1{
+  margin-bottom: 30px;
+/*  text-align: center;*/
+}
+
+.side-unit{
+  color: #F5F5F5;
+  border-radius: 6px;
+  padding-top: 10px;
+}
+
+.user_card{
+  float:right;		
+  padding-right: 50px;
+  padding-top: 40px;
+  
+}
+.footer{
+	text-align: center;
+	padding-top: 10px;
+}

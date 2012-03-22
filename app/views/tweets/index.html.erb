@@ -1,0 +1,35 @@
+
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span3 side-unit">
+	  <%= image_tag "logo.png"%>
+      <br/>
+      <br/>
+      <h1>People who are leading!!</h1>
+      <ul class="thumbnails">
+        <% @users.each do |user| %>
+            <li class="span4 user_detail"  style = "background-color:lightyellow;">
+				<br/>
+              <img src=<%= "#{@redis.hget(user[:member], "profile_image_url")}"%>  width="75"  height="75"/>
+              <div class="user_card">
+                <a href="http://twitter.com/<%= "#{@redis.hget(user[:member], "from_user")}"%>">
+                  @<%= "#{@redis.hget(user[:member], "from_user")}"%> (<%= user[:score].to_i%>)
+                </a>
+              </div>
+            </li>
+        <%end%>
+      </ul>
+    </div>
+    <div class="span9">
+      <div class="hero-unit">
+        <h1>
+          RubyConfIndia Leader Board
+        </h1>
+      </div>
+        <ul class="thumbnails" id ='tweets'>
+          <%= render :partial => 'tweet', :locals => {:tweets => @tweets}%>
+        </ul>
+      </div>
+      <%= will_paginate @tweets %>
+  </div>
+</div>
