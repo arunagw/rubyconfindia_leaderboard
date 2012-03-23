@@ -1,6 +1,6 @@
 <%#@tweets = @tweets.collect{|a| JSON.parse(a)}%>
 <%tweets.each_with_index do |tweet, index| %>
     <li class="span9"  style="background-color:lightyellow;">
-      <%= tweet["html"].html_safe%>
+      <%= tweet["html"].try(:html_safe)%>
     </li>
 <%end%>
