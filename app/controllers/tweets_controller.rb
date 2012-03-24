@@ -40,6 +40,10 @@ class TweetsController < ApplicationController
   end
 
 
+  def surprise
+    
+  end
+
   private
 
   def tweet_key

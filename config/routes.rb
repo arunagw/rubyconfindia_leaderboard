@@ -3,6 +3,7 @@ RubyconfLeaderboard::Application.routes.draw do
   end
 
   root :to => "tweets#index"
+  match 'surprise' => "tweets#surprise"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
